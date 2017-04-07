@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/game"
+    android:scrollbarThumbVertical="@color/transperent"
+    tools:context="com.example.android.quidditch.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/qwc"
+                android:layout_width="@dimen/wrap_content"
+                android:layout_height="@dimen/wrap_content"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/quidditch"
+                tools:ignore="ContentDescription" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/LandButtomSlyth"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content"
+            android:onClick="button2" />
+
+        <ImageView
+            android:id="@+id/icon_1"
+            style="@style/LandTeamGryfImage"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/icon_2"
+            style="@style/LandTeamSlythImage"
+            tools:ignore="ContentDescription" />
+
+
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Snitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/game_reset"
+            android:background="@drawable/snitch"
+            android:onClick="button3" />
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/LandButtonGryf"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content"
+            android:onClick="button1" />
+
+        <TextView
+            android:id="@+id/team_g_score"
+            style="@style/LandGryfTextScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/team_s_score"
+            style="@style/LandSlythTextScore"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content" />
+
+
+        <Button
+            android:id="@+id/game_reset"
+            style="@style/LandPlayAgain"
+            android:onClick="resetScore" />
+
+
+        <Button
+            android:id="@+id/game_rules"
+            style="@style/LandGameRules"
+            android:onClick="game_rules" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/game"
+    android:scrollbarThumbVertical="@color/transperent"
+    tools:context="com.example.android.quidditch.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:layout_width="@dimen/qwc"
+                android:layout_height="@dimen/qwc"
+                android:src="@drawable/quidditch"
+                tools:ignore="ContentDescription" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <ImageView
+            android:id="@+id/icon_1"
+            style="@style/TeamImage"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/gryf"
+            tools:ignore="ContentDescription" />
+
+
+        <ImageView
+            android:id="@+id/icon_2"
+            style="@style/TeamImage"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/slyth"
+            tools:ignore="ContentDescription" />
+
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Snitch"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content"
+            android:onClick="button3" />
+
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/GryfButton"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content"
+            android:layout_marginTop="@dimen/scroll_2"
+            android:onClick="button1" />
+
+
+        <Button
+            android:id="@+id/game_reset"
+            style="@style/PlayAgain"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content"
+            android:onClick="resetScore" />
+
+        <Button
+            android:id="@+id/game_rules"
+            style="@style/GameRules"
+            android:onClick="game_rules" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/SlythButton"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content"
+            android:onClick="button2"/>
+
+        <TextView
+            android:id="@+id/team_g_score"
+            style="@style/GryfTextScore"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/match_parent" />
+
+        <TextView
+            android:id="@+id/team_s_score"
+            style="@style/SlythTextScore"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/match_parent" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

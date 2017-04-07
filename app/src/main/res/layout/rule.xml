@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/poup">
+
+
+    <TextView
+        android:id="@+id/texttitle"
+        style="@style/TextRules"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wrap_content" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/texttitle"
+        android:fillViewport="true"
+        android:scrollbarSize="1dp"
+        android:scrollbarThumbVertical="@color/transperent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textintro"
+                style="@style/TextText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rulesintro" />
+
+            <TextView
+                style="@style/TextText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textintro"
+                android:text="@string/rulesequp" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

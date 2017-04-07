@@ -1,0 +1,220 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="TeamImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/height</item>
+        <item name="android:layout_below">@id/shimmer_view_container</item>
+    </style>
+
+    <style name="LandTeamGryfImage">
+        <item name="android:layout_width">@dimen/width</item>
+        <item name="android:layout_height">@dimen/height_2</item>
+        <item name="android:layout_below">@id/shimmer_view_container</item>
+        <item name="android:src">@drawable/gryf</item>
+        <item name="android:layout_toStartOf">@id/shimmer_view_container</item>
+        <item name="android:layout_marginEnd">@dimen/fourteen</item>
+        <item name="android:layout_alignBottom">@id/icon_2</item>
+    </style>
+
+    <style name="LandTeamSlythImage">
+        <item name="android:layout_width">@dimen/width</item>
+        <item name="android:layout_height">@dimen/height_2</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginStart">@dimen/thirteen</item>
+        <item name="android:layout_marginTop">@dimen/seventy_three</item>
+        <item name="android:src">@drawable/slyth</item>
+        <item name="android:layout_toEndOf">@id/shimmer_view_container</item>
+    </style>
+
+    <style name="GryfTextScore">
+        <item name="android:text">@string/start_score</item>
+        <item name="android:layout_marginTop">@dimen/seven</item>
+        <item name="android:layout_marginBottom">@dimen/seven</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_marginStart">@dimen/margin</item>
+        <item name="android:textSize">@dimen/text</item>
+        <item name="android:layout_below">@id/icon_1</item>
+        <item name="android:textColor">@color/score_1</item>
+        <item name="android:layout_alignBaseline">@id/team_s_score</item>
+        <item name="android:layout_alignBottom">@id/team_s_score</item>
+        <item name="android:layout_alignStart">@id/button1</item>
+        <item name="android:fontFamily">cursive</item>
+    </style>
+
+    <style name="LandGryfTextScore">
+        <item name="android:text">@string/start_score</item>
+        <item name="android:layout_alignStart">@id/button1</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:layout_below">@id/icon_1</item>
+        <item name="android:layout_marginStart">@dimen/twelve</item>
+        <item name="android:textColor">@color/score_1</item>
+        <item name="android:textSize">@dimen/text_two</item>
+    </style>
+
+
+    <style name="SlythTextScore">
+        <item name="android:text">@string/start_score</item>
+        <item name="android:layout_marginTop">@dimen/seven</item>
+        <item name="android:layout_marginBottom">@dimen/seven</item>
+        <item name="android:layout_alignEnd">@id/icon_2</item>
+        <item name="android:layout_marginEnd">@dimen/margin</item>
+        <item name="android:textSize">@dimen/text</item>
+        <item name="android:layout_below">@id/icon_2</item>
+        <item name="android:textColor">@color/score_2</item>
+        <item name="android:fontFamily">cursive</item>
+    </style>
+
+    <style name="LandSlythTextScore">
+        <item name="android:text">@string/start_score</item>
+        <item name="android:layout_alignEnd">@id/icon_2</item>
+        <item name="android:textSize">@dimen/text_two</item>
+        <item name="android:layout_below">@id/icon_2</item>
+        <item name="android:textColor">@color/score_2</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:layout_alignStart">@id/button2</item>
+        <item name="android:layout_marginStart">@dimen/twelve</item>
+    </style>
+
+    <style name="GryfButton">
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:text">@string/quaffle</item>
+        <item name="android:textColor">@color/buttons</item>
+        <item name="android:textSize">@dimen/text_three</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_below">@id/team_g_score</item>
+        <item name="android:background">@drawable/shape</item>
+        <item name="android:layout_marginStart">@dimen/margin</item>
+        <item name="android:backgroundTint">@color/score_1</item>
+    </style>
+
+    <style name="LandButtonGryf">
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:text">@string/quaffle</item>
+        <item name="android:textColor">@color/buttons</item>
+        <item name="android:textSize">@dimen/text_three</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_alignEnd">@id/icon_1</item>
+        <item name="android:layout_below">@id/button3</item>
+        <item name="android:background">@drawable/shape</item>
+        <item name="android:layout_marginStart">@dimen/margin</item>
+        <item name="android:backgroundTint">@color/score_1</item>
+    </style>
+
+
+    <style name="SlythButton">
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:text">@string/quaffle</item>
+        <item name="android:textColor">@color/buttons</item>
+        <item name="android:textSize">@dimen/text_three</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_below">@id/team_s_score</item>
+        <item name="android:background">@drawable/shape</item>
+        <item name="android:layout_marginEnd">@dimen/margin_second</item>
+        <item name="android:layout_alignEnd">@id/icon_2</item>
+        <item name="android:backgroundTint">@color/score_2</item>
+    </style>
+
+
+    <style name="LandButtomSlyth">
+        <item name="android:layout_alignEnd">@id/icon_2</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textSize">@dimen/text_three</item>
+        <item name="android:textColor">@color/buttons</item>
+        <item name="android:backgroundTint">@color/score_2</item>
+        <item name="android:background">@drawable/shape</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_below">@id/button3</item>
+        <item name="android:text">@string/quaffle</item>
+    </style>
+
+    <style name="PlayAgain">
+        <item name="android:text">@string/play_over</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/buttons</item>
+        <item name="android:textSize">@dimen/play_again_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_below">@id/button3</item>
+        <item name="android:layout_marginTop">@dimen/width</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@drawable/shape_two</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:backgroundTint">@color/play_again</item>
+    </style>
+
+
+    <style name="LandPlayAgain">
+        <item name="android:text">@string/play_over</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_height">@dimen/margin</item>
+        <item name="android:layout_width">@dimen/width</item>
+        <item name="android:textColor">@color/buttons</item>
+        <item name="android:textSize">@dimen/text_three</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_below">@id/button3</item>
+        <item name="android:layout_marginTop">@dimen/margin_second</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@drawable/shape_two</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:backgroundTint">@color/play_again</item>
+    </style>
+
+    <style name="Snitch">
+        <item name="android:background">@drawable/snitch</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_below">@id/icon_1</item>
+    </style>
+
+
+    <style name="GameRules">
+        <item name="android:background">@drawable/letter</item>
+        <item name="android:layout_below">@id/game_reset</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_height">@dimen/fifty</item>
+        <item name="android:layout_width">@dimen/fifty</item>
+        <item name="android:layout_marginTop">@dimen/fifty</item>
+    </style>
+
+    <style name="LandGameRules">
+        <item name="android:background">@drawable/letter</item>
+        <item name="android:layout_below">@id/game_reset</item>
+        <item name="android:layout_height">@dimen/margin</item>
+        <item name="android:layout_width">@dimen/margin</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+
+
+    <style name="TextRules">
+        <item name="android:background">@color/poup_2</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:text">@string/game_rules</item>
+        <item name="android:textColor">@color/poup_text</item>
+        <item name="android:textSize">@dimen/text_poup_2</item>
+        <item name="android:paddingStart">@dimen/tweenty</item>
+    </style>
+
+    <style name="TextText">
+        <item name="android:layout_marginEnd">@dimen/ten</item>
+        <item name="android:layout_marginStart">@dimen/ten</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textColor">@color/poup_text_2</item>
+        <item name="android:textSize">@dimen/text_poup</item>
+    </style>
+
+    <style name="WinnerText">
+        <item name="android:textSize">@dimen/text_four</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">@dimen/height</item>
+        <item name="android:textColor">@color/get_text</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+</resources>

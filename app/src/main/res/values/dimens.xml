@@ -1,0 +1,51 @@
+<resources>
+
+    <dimen name="qwc">150dp</dimen>
+    <dimen name="wrap_content">-2dp</dimen>
+    <dimen name="match_parent">-1dp</dimen>
+    <dimen name="just_zero">0dp</dimen>
+    <dimen name="icons">170dp</dimen>
+    <dimen name="hundred">100dp</dimen>
+    <dimen name="for_icons">85dp</dimen>
+    <dimen name="for_icons_2">15dp</dimen>
+    <dimen name="thirtyfive">50dp</dimen>
+    <dimen name="score_height">70dp</dimen>
+    <dimen name="score_margin">15dp</dimen>
+    <dimen name="score_margin_2">40dp</dimen>
+    <dimen name="score_margin_3">60dp</dimen>
+    <dimen name="quaffle_size">23sp</dimen>
+    <dimen name="snitch_margin">45dp</dimen>
+    <dimen name="play_again_size">25sp</dimen>
+    <dimen name="play_again_margin">30dp</dimen>
+    <dimen name="start_size">40sp</dimen>
+    <dimen name="zero_margin">60dp</dimen>
+    <dimen name="zero_margin_2">80dp</dimen>
+    <dimen name="text_poup">20sp</dimen>
+    <dimen name="text_poup_2">50sp</dimen>
+    <dimen name="scroll">360dp</dimen>
+    <dimen name="scroll_2">5dp</dimen>
+    <dimen name="height">170dp</dimen>
+    <dimen name="height_2">150dp</dimen>
+    <dimen name="seventy_three">73dp</dimen>
+    <dimen name="width">100dp</dimen>
+    <dimen name="fourteen">14dp</dimen>
+    <dimen name="ten">10dp</dimen>
+    <dimen name="tweenty">20dp</dimen>
+    <dimen name="margin">40dp</dimen>
+    <dimen name="fifty">50dp</dimen>
+    <dimen name="margin_second">30dp</dimen>
+    <dimen name="text">40sp</dimen>
+    <dimen name="text_four">45sp</dimen>
+    <dimen name="text_two">30sp</dimen>
+    <dimen name="threehundred">300dp</dimen>
+    <dimen name="twohundred">200dp</dimen>
+    <dimen name="text_three">18sp</dimen>
+    <dimen name="thirteen">13dp</dimen>
+    <dimen name="twelve">12dp</dimen>
+    <dimen name="seven">7dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+
+</resources>
