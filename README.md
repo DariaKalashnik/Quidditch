@@ -10,4 +10,6 @@
 5. The reset button resets all the previous results.
 6. The user can also check the game rules by clicking on the button in the bottom of the screen.
 
-## Screenshots:
+## GIF:
+![scorekeeper](https://user-images.githubusercontent.com/25595009/28317937-2bd8ebe2-6bc9-11e7-9839-0f4a7f4d1e6b.gif)
+
