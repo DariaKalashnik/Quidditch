@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:configChanges="orientation"
+        android:configChanges="orientation|screenSize|keyboardHidden"
         android:icon="@mipmap/ic_quid"
         android:label="@string/app_name"
         android:supportsRtl="true"

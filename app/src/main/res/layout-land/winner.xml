@@ -1,35 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/poup">
-
-   <ImageView
-       android:id="@+id/cupwinner"
-       android:layout_below="@id/grifwon"
-       android:layout_width="@dimen/wrap_content"
-       android:layout_height="@dimen/threehundred"
-       android:layout_centerHorizontal="true"
-       android:layout_marginTop="@dimen/thirtyfive"
-       android:src="@drawable/cup" />
 
 
     <TextView
         style="@style/WinnerText"
         android:id="@+id/grifwon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
         android:layout_marginTop="@dimen/ten" />
 
     <ImageView
+        android:id="@+id/cupwinner"
+        style="@style/CupWinner"
+        android:layout_height="@dimen/threehundred"
+        android:layout_marginTop="@dimen/thirtyfive"
+        tools:ignore="ContentDescription"/>
+
+    <ImageView
         android:id="@+id/firework"
-        android:layout_width="@dimen/threehundred"
-        android:layout_height="@dimen/twohundred"
-        android:src="@drawable/silvester"
-        android:layout_marginTop="@dimen/score_margin"
-        android:layout_alignTop="@+id/grifwon"
-        android:layout_centerHorizontal="true" />
+        style="@style/FireWorkWinner.L"
+        tools:ignore="ContentDescription"/>
 
 
 </RelativeLayout>

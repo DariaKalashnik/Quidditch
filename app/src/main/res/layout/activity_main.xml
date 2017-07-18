@@ -9,90 +9,132 @@
     tools:context="com.example.android.quidditch.MainActivity">
 
     <RelativeLayout
-        android:id="@+id/layoutLayout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.facebook.shimmer.ShimmerFrameLayout
-            android:id="@+id/shimmer_view_container"
-            android:layout_width="@dimen/wrap_content"
-            android:layout_height="@dimen/wrap_content"
-            android:layout_centerHorizontal="true">
+        <RelativeLayout
+            android:id="@+id/layoutLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="@dimen/qwc"
+                    android:layout_height="@dimen/qwc"
+                    android:src="@drawable/quidditch"
+                    tools:ignore="ContentDescription" />
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
 
             <ImageView
-                android:layout_width="@dimen/qwc"
-                android:layout_height="@dimen/qwc"
-                android:src="@drawable/quidditch"
+                android:id="@+id/icon_1"
+                style="@style/TeamImage"
+                android:layout_alignParentStart="true"
+                android:onClick="click"
+                android:src="@drawable/gryf"
                 tools:ignore="ContentDescription" />
 
-        </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <ImageView
+                android:id="@+id/icon_2"
+                style="@style/TeamImage"
+                android:layout_alignParentEnd="true"
+                android:onClick="click"
+                android:src="@drawable/slyth"
+                tools:ignore="ContentDescription" />
 
 
-        <ImageView
-            android:id="@+id/icon_1"
-            style="@style/TeamImage"
-            android:layout_alignParentStart="true"
-            android:src="@drawable/gryf"
-            tools:ignore="ContentDescription" />
+            <Button
+                android:id="@+id/button3"
+                style="@style/Snitch"
+                android:onClick="button3" />
 
 
-        <ImageView
-            android:id="@+id/icon_2"
-            style="@style/TeamImage"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/slyth"
-            tools:ignore="ContentDescription" />
+            <Button
+                android:id="@+id/game_reset"
+                style="@style/PlayAgain"
+                android:onClick="resetScore" />
+
+            <Button
+                android:id="@+id/game_rules"
+                style="@style/GameRules"
+                android:layout_marginTop="@dimen/fifty"
+                android:onClick="game_rules" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/SlythButton.V"
+                android:onClick="button2" />
+
+            <TextView
+                android:id="@+id/team_g_score"
+                style="@style/GryfTextScore.V" />
+
+            <TextView
+                android:id="@+id/team_s_score"
+                style="@style/SlythTextScore.V" />
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/GryfButton.V"
+                android:layout_alignStart="@+id/team_g_score"
+                android:layout_below="@+id/team_g_score"
+                android:onClick="button1" />
 
 
-        <Button
-            android:id="@+id/button3"
-            style="@style/Snitch"
-            android:layout_width="@dimen/wrap_content"
-            android:layout_height="@dimen/wrap_content"
-            android:onClick="button3" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/choiceplayer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/value_500"
+            android:layout_below="@+id/layoutLayout"
+            android:layout_marginTop="@dimen/value_30"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/pic_1"
+                style="@style/ChooseTeam"
+                android:layout_alignParentStart="true"
+                android:onClick="selectTeam"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/pic_2"
+                style="@style/TeamImage.side"
+                android:onClick="selectTeam"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/pic_3"
+                style="@style/ChooseTeam"
+                android:layout_below="@+id/pic_1"
+                android:onClick="selectTeam"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/pic_4"
+                style="@style/TeamImage.side"
+                android:layout_below="@id/pic_2"
+                android:onClick="selectTeam"
+                tools:ignore="ContentDescription" />
 
 
-        <Button
-            android:id="@+id/button1"
-            style="@style/GryfButton"
-            android:layout_width="@dimen/wrap_content"
-            android:layout_height="@dimen/wrap_content"
-            android:layout_marginTop="@dimen/scroll_2"
-            android:onClick="button1" />
-
-
-        <Button
-            android:id="@+id/game_reset"
-            style="@style/PlayAgain"
-            android:layout_width="@dimen/wrap_content"
-            android:layout_height="@dimen/wrap_content"
-            android:onClick="resetScore" />
-
-        <Button
-            android:id="@+id/game_rules"
-            style="@style/GameRules"
-            android:onClick="game_rules" />
-
-        <Button
-            android:id="@+id/button2"
-            style="@style/SlythButton"
-            android:layout_width="@dimen/wrap_content"
-            android:layout_height="@dimen/wrap_content"
-            android:onClick="button2"/>
-
-        <TextView
-            android:id="@+id/team_g_score"
-            style="@style/GryfTextScore"
-            android:layout_width="@dimen/wrap_content"
-            android:layout_height="@dimen/match_parent" />
-
-        <TextView
-            android:id="@+id/team_s_score"
-            style="@style/SlythTextScore"
-            android:layout_width="@dimen/wrap_content"
-            android:layout_height="@dimen/match_parent" />
-
+        </RelativeLayout>
 
     </RelativeLayout>
 
+
 </ScrollView>
+
+
+
+
+

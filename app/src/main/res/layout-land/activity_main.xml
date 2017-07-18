@@ -9,85 +9,126 @@
     tools:context="com.example.android.quidditch.MainActivity">
 
     <RelativeLayout
-        android:id="@+id/relative"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.facebook.shimmer.ShimmerFrameLayout
-            android:id="@+id/shimmer_view_container"
-            android:layout_width="@dimen/wrap_content"
-            android:layout_height="@dimen/wrap_content"
-            android:layout_centerHorizontal="true">
+        <RelativeLayout
+            android:id="@+id/layoutLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/qwc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/score_margin"
+                    android:src="@drawable/quidditch"
+                    tools:ignore="ContentDescription" />
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/SlythButton.L"
+                android:onClick="button2" />
 
             <ImageView
-                android:id="@+id/qwc"
-                android:layout_width="@dimen/wrap_content"
-                android:layout_height="@dimen/wrap_content"
-                android:layout_marginTop="15dp"
-                android:src="@drawable/quidditch"
+                android:id="@+id/icon_1"
+                style="@style/TeamImage.Gryf"
+                android:onClick="click"
                 tools:ignore="ContentDescription" />
 
-        </com.facebook.shimmer.ShimmerFrameLayout>
+            <ImageView
+                android:id="@+id/icon_2"
+                style="@style/TeamImage.Slyth"
+                android:onClick="click"
+                tools:ignore="ContentDescription" />
 
 
-        <Button
-            android:id="@+id/button2"
-            style="@style/LandButtomSlyth"
-            android:layout_width="@dimen/wrap_content"
-            android:layout_height="@dimen/wrap_content"
-            android:onClick="button2" />
+            <Button
+                android:id="@+id/button3"
+                style="@style/Snitch"
+                android:layout_alignStart="@+id/game_reset"
+                android:onClick="button3" />
 
-        <ImageView
-            android:id="@+id/icon_1"
-            style="@style/LandTeamGryfImage"
-            tools:ignore="ContentDescription" />
+            <Button
+                android:id="@+id/button1"
+                style="@style/GryfButton.L"
+                android:onClick="button1" />
 
-        <ImageView
-            android:id="@+id/icon_2"
-            style="@style/LandTeamSlythImage"
-            tools:ignore="ContentDescription" />
+            <TextView
+                android:id="@+id/team_g_score"
+                style="@style/GryfTextScore.L" />
 
-
-
-        <Button
-            android:id="@+id/button3"
-            style="@style/Snitch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/game_reset"
-            android:background="@drawable/snitch"
-            android:onClick="button3" />
-
-        <Button
-            android:id="@+id/button1"
-            style="@style/LandButtonGryf"
-            android:layout_width="@dimen/wrap_content"
-            android:layout_height="@dimen/wrap_content"
-            android:onClick="button1" />
-
-        <TextView
-            android:id="@+id/team_g_score"
-            style="@style/LandGryfTextScore"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/team_s_score"
-            style="@style/LandSlythTextScore"
-            android:layout_width="@dimen/wrap_content"
-            android:layout_height="@dimen/wrap_content" />
+            <TextView
+                android:id="@+id/team_s_score"
+                style="@style/SlythTextScore.L" />
 
 
-        <Button
-            android:id="@+id/game_reset"
-            style="@style/LandPlayAgain"
-            android:onClick="resetScore" />
+            <Button
+                android:id="@+id/game_reset"
+                style="@style/PlayAgain.L"
+                android:onClick="resetScore" />
 
 
-        <Button
-            android:id="@+id/game_rules"
-            style="@style/LandGameRules"
-            android:onClick="game_rules" />
+            <Button
+                android:id="@+id/game_rules"
+                style="@style/GameRules.Land"
+                android:onClick="game_rules" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/choiceplayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutLayout"
+            android:layout_marginTop="@dimen/value_30"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/pic_2"
+                style="@style/LandChooseTeam"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="150dp"
+                android:onClick="selectTeam"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/pic_3"
+                style="@style/LandChooseTeam"
+                android:layout_below="@+id/pic_1"
+                android:layout_marginStart="150dp"
+                android:onClick="selectTeam"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/pic_4"
+                style="@style/LandChooseTeam"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/pic_2"
+                android:layout_marginEnd="150dp"
+                android:onClick="selectTeam"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/pic_1"
+                style="@style/LandChooseTeam"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="150dp"
+                android:onClick="selectTeam"
+                tools:ignore="ContentDescription" />
+
+
+        </RelativeLayout>
 
     </RelativeLayout>
 

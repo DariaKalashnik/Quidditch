@@ -9,15 +9,11 @@
         android:id="@+id/title"
         style="@style/TextRules"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/wrap_content" />
+        android:layout_height="wrap_content" />
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:fillViewport="true"
-        android:scrollbarSize="1dp"
-        android:scrollbarThumbVertical="@color/transperent">
+        style="@style/ScrollText"
+        android:layout_below="@id/title">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -26,15 +22,11 @@
             <TextView
                 android:id="@+id/textintro"
                 style="@style/TextText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/value_10"
                 android:text="@string/rulesintro" />
 
             <TextView
                 style="@style/TextText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_below="@id/textintro"
                 android:text="@string/rulesequp" />
 

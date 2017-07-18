@@ -3,9 +3,10 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
     </style>
 
+    <!-- Two default images style -->
 
     <style name="TeamImage">
         <item name="android:layout_width">wrap_content</item>
@@ -13,17 +14,42 @@
         <item name="android:layout_below">@id/shimmer_view_container</item>
     </style>
 
-    <style name="LandTeamGryfImage">
+    <!-- Four teams to choose -->
+
+    <style name="ChooseTeam">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/height</item>
+        <item name="android:layout_margin">@dimen/tweenty</item>
+    </style>
+
+    <!-- Four teams to choose landscape -->
+
+    <style name="LandChooseTeam">
         <item name="android:layout_width">@dimen/width</item>
         <item name="android:layout_height">@dimen/height_2</item>
-        <item name="android:layout_below">@id/shimmer_view_container</item>
+    </style>
+
+    <!-- Four teams to choose Right side -->
+
+    <style name="TeamImage.side">
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_margin">@dimen/tweenty</item>
+    </style>
+
+    <!-- A team landscape -->
+
+    <style name="TeamImage.Gryf">
+        <item name="android:layout_width">@dimen/width</item>
+        <item name="android:layout_height">@dimen/height_2</item>
         <item name="android:src">@drawable/gryf</item>
         <item name="android:layout_toStartOf">@id/shimmer_view_container</item>
         <item name="android:layout_marginEnd">@dimen/fourteen</item>
         <item name="android:layout_alignBottom">@id/icon_2</item>
     </style>
 
-    <style name="LandTeamSlythImage">
+    <!-- B team landscape -->
+
+    <style name="TeamImage.Slyth">
         <item name="android:layout_width">@dimen/width</item>
         <item name="android:layout_height">@dimen/height_2</item>
         <item name="android:layout_alignParentTop">true</item>
@@ -33,145 +59,163 @@
         <item name="android:layout_toEndOf">@id/shimmer_view_container</item>
     </style>
 
+    <!-- A team scores -->
+
     <style name="GryfTextScore">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textColor">@color/score_1</item>
         <item name="android:text">@string/start_score</item>
+    </style>
+
+    <!-- A team scores vertical -->
+
+    <style name="GryfTextScore.V">
         <item name="android:layout_marginTop">@dimen/seven</item>
         <item name="android:layout_marginBottom">@dimen/seven</item>
         <item name="android:layout_alignParentStart">true</item>
         <item name="android:layout_marginStart">@dimen/margin</item>
         <item name="android:textSize">@dimen/text</item>
-        <item name="android:layout_below">@id/icon_1</item>
-        <item name="android:textColor">@color/score_1</item>
         <item name="android:layout_alignBaseline">@id/team_s_score</item>
         <item name="android:layout_alignBottom">@id/team_s_score</item>
-        <item name="android:layout_alignStart">@id/button1</item>
-        <item name="android:fontFamily">cursive</item>
     </style>
 
-    <style name="LandGryfTextScore">
-        <item name="android:text">@string/start_score</item>
+    <!-- A team landscape scores -->
+
+    <style name="GryfTextScore.L">
         <item name="android:layout_alignStart">@id/button1</item>
-        <item name="android:fontFamily">cursive</item>
         <item name="android:layout_below">@id/icon_1</item>
         <item name="android:layout_marginStart">@dimen/twelve</item>
-        <item name="android:textColor">@color/score_1</item>
         <item name="android:textSize">@dimen/text_two</item>
     </style>
 
+    <!-- B team scores -->
 
     <style name="SlythTextScore">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:text">@string/start_score</item>
-        <item name="android:layout_marginTop">@dimen/seven</item>
-        <item name="android:layout_marginBottom">@dimen/seven</item>
-        <item name="android:layout_alignEnd">@id/icon_2</item>
-        <item name="android:layout_marginEnd">@dimen/margin</item>
-        <item name="android:textSize">@dimen/text</item>
-        <item name="android:layout_below">@id/icon_2</item>
         <item name="android:textColor">@color/score_2</item>
         <item name="android:fontFamily">cursive</item>
+        <item name="android:layout_alignEnd">@id/icon_2</item>
+        <item name="android:layout_below">@id/icon_2</item>
     </style>
 
-    <style name="LandSlythTextScore">
-        <item name="android:text">@string/start_score</item>
-        <item name="android:layout_alignEnd">@id/icon_2</item>
+    <!-- B team scores vertical-->
+
+    <style name="SlythTextScore.V">
+        <item name="android:layout_marginTop">@dimen/seven</item>
+        <item name="android:layout_marginBottom">@dimen/seven</item>
+        <item name="android:layout_marginEnd">@dimen/margin</item>
+        <item name="android:textSize">@dimen/text</item>
+
+    </style>
+
+    <!-- B team landscape scores -->
+
+    <style name="SlythTextScore.L">
         <item name="android:textSize">@dimen/text_two</item>
-        <item name="android:layout_below">@id/icon_2</item>
-        <item name="android:textColor">@color/score_2</item>
-        <item name="android:fontFamily">cursive</item>
         <item name="android:layout_alignStart">@id/button2</item>
         <item name="android:layout_marginStart">@dimen/twelve</item>
     </style>
 
+    <!-- A team button -->
+
     <style name="GryfButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">cursive</item>
         <item name="android:text">@string/quaffle</item>
         <item name="android:textColor">@color/buttons</item>
-        <item name="android:textSize">@dimen/text_three</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/shape</item>
+        <item name="android:backgroundTint">@color/score_1</item>
+        <item name="android:textSize">@dimen/text_three</item>
+        <item name="android:layout_marginStart">@dimen/margin</item>
+    </style>
+
+    <!-- A team button vertical-->
+
+    <style name="GryfButton.V">
         <item name="android:layout_alignParentStart">true</item>
         <item name="android:layout_below">@id/team_g_score</item>
-        <item name="android:background">@drawable/shape</item>
-        <item name="android:layout_marginStart">@dimen/margin</item>
-        <item name="android:backgroundTint">@color/score_1</item>
+        <item name="android:layout_marginTop">@dimen/scroll_2</item>
     </style>
 
-    <style name="LandButtonGryf">
-        <item name="android:fontFamily">cursive</item>
-        <item name="android:text">@string/quaffle</item>
-        <item name="android:textColor">@color/buttons</item>
-        <item name="android:textSize">@dimen/text_three</item>
-        <item name="android:textStyle">bold</item>
+    <!-- A team landscape button -->
+
+    <style name="GryfButton.L">
         <item name="android:layout_alignEnd">@id/icon_1</item>
         <item name="android:layout_below">@id/button3</item>
-        <item name="android:background">@drawable/shape</item>
-        <item name="android:layout_marginStart">@dimen/margin</item>
-        <item name="android:backgroundTint">@color/score_1</item>
     </style>
 
+    <!-- B team button -->
 
     <style name="SlythButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">cursive</item>
         <item name="android:text">@string/quaffle</item>
         <item name="android:textColor">@color/buttons</item>
         <item name="android:textSize">@dimen/text_three</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/shape</item>
+        <item name="android:backgroundTint">@color/score_2</item>
+        <item name="android:layout_alignEnd">@id/icon_2</item>
+    </style>
+
+    <!-- B team button vertical -->
+
+    <style name="SlythButton.V">
         <item name="android:layout_below">@id/team_s_score</item>
-        <item name="android:background">@drawable/shape</item>
         <item name="android:layout_marginEnd">@dimen/margin_second</item>
-        <item name="android:layout_alignEnd">@id/icon_2</item>
-        <item name="android:backgroundTint">@color/score_2</item>
     </style>
 
+    <!-- B team landscape button -->
 
-    <style name="LandButtomSlyth">
-        <item name="android:layout_alignEnd">@id/icon_2</item>
-        <item name="android:fontFamily">cursive</item>
-        <item name="android:textSize">@dimen/text_three</item>
-        <item name="android:textColor">@color/buttons</item>
-        <item name="android:backgroundTint">@color/score_2</item>
-        <item name="android:background">@drawable/shape</item>
-        <item name="android:textStyle">bold</item>
+    <style name="SlythButton.L">
         <item name="android:layout_below">@id/button3</item>
-        <item name="android:text">@string/quaffle</item>
     </style>
+
+    <!-- Play Again button -->
 
     <style name="PlayAgain">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:text">@string/play_over</item>
         <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_poup</item>
         <item name="android:textColor">@color/buttons</item>
-        <item name="android:textSize">@dimen/play_again_size</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_below">@id/button3</item>
-        <item name="android:layout_marginTop">@dimen/width</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:background">@drawable/shape_two</item>
         <item name="android:fontFamily">cursive</item>
         <item name="android:backgroundTint">@color/play_again</item>
+        <item name="android:layout_marginTop">@dimen/width</item>
     </style>
 
+    <!-- Play Again button landscape -->
 
-    <style name="LandPlayAgain">
-        <item name="android:text">@string/play_over</item>
-        <item name="android:textAllCaps">false</item>
+    <style name="PlayAgain.L">
         <item name="android:layout_height">@dimen/margin</item>
         <item name="android:layout_width">@dimen/width</item>
-        <item name="android:textColor">@color/buttons</item>
-        <item name="android:textSize">@dimen/text_three</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:layout_below">@id/button3</item>
         <item name="android:layout_marginTop">@dimen/margin_second</item>
-        <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:background">@drawable/shape_two</item>
-        <item name="android:fontFamily">cursive</item>
-        <item name="android:backgroundTint">@color/play_again</item>
+        <item name="android:textSize">@dimen/text_three</item>
     </style>
 
+    <!-- Snitch button -->
+
     <style name="Snitch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/snitch</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_below">@id/icon_1</item>
     </style>
 
+    <!-- Game rules button -->
 
     <style name="GameRules">
         <item name="android:background">@drawable/letter</item>
@@ -179,28 +223,44 @@
         <item name="android:layout_alignParentEnd">true</item>
         <item name="android:layout_height">@dimen/fifty</item>
         <item name="android:layout_width">@dimen/fifty</item>
-        <item name="android:layout_marginTop">@dimen/fifty</item>
     </style>
 
-    <style name="LandGameRules">
-        <item name="android:background">@drawable/letter</item>
-        <item name="android:layout_below">@id/game_reset</item>
+    <!-- PopupWindow for game rules landscape -->
+
+    <style name="GameRules.Land">
         <item name="android:layout_height">@dimen/margin</item>
         <item name="android:layout_width">@dimen/margin</item>
-        <item name="android:layout_alignParentEnd">true</item>
     </style>
 
+    <!-- Title for game rules -->
 
     <style name="TextRules">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@color/poup_2</item>
         <item name="android:fontFamily">cursive</item>
         <item name="android:text">@string/game_rules</item>
         <item name="android:textColor">@color/poup_text</item>
-        <item name="android:textSize">@dimen/text_poup_2</item>
+        <item name="android:textSize">@dimen/start_size</item>
         <item name="android:paddingStart">@dimen/tweenty</item>
     </style>
 
+    <!-- ScrollView for game rules -->
+
+    <style name="ScrollText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/texttitle</item>
+        <item name="android:scrollbarSize">@dimen/value_1</item>
+        <item name="android:fillViewport">true</item>
+        <item name="android:scrollbarThumbVertical">@color/transperent</item>
+    </style>
+
+    <!-- Text for game rules -->
+
     <style name="TextText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginEnd">@dimen/ten</item>
         <item name="android:layout_marginStart">@dimen/ten</item>
         <item name="android:fontFamily">cursive</item>
@@ -208,13 +268,50 @@
         <item name="android:textSize">@dimen/text_poup</item>
     </style>
 
+    <!-- Text for winner -->
+
     <style name="WinnerText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/text_four</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_marginTop">@dimen/height</item>
         <item name="android:textColor">@color/get_text</item>
         <item name="android:fontFamily">cursive</item>
         <item name="android:textStyle">italic</item>
+    </style>
+
+    <!-- Image Cup for winner -->
+
+    <style name="CupWinner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/cup</item>
+        <item name="android:layout_marginTop">@dimen/width</item>
+       <item name="android:layout_below">@id/grifwon</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <!-- Image FireWorks for winner -->
+
+    <style name="FireWorkWinner">
+        <item name="android:layout_width">@dimen/threehundred</item>
+        <item name="android:layout_height">@dimen/twohundred</item>
+        <item name="android:src">@drawable/silvester</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <!-- Image FireWorks for winner vertical -->
+
+    <style name="FireWorkWinner.V">
+        <item name="android:layout_above">@id/cupwinner</item>
+    </style>
+
+    <!-- Image FireWorks for winner landscape -->
+
+    <style name="FireWorkWinner.L">
+        <item name="android:layout_alignTop">@id/grifwon</item>
+        <item name="android:layout_marginTop">@dimen/score_margin</item>
     </style>
 
 </resources>

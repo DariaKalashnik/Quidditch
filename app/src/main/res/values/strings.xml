@@ -4,15 +4,24 @@
     <string name="play_over">Play again</string>
     <string name="start_score">000</string>
     <string name="game_rules">Game rules</string>
+    <string name="winner_A">Team A won !</string>
+    <string name="winner_B">Team B won !</string>
+    <string name="reset">000</string>
+    <string name="score1">G_score</string>
+    <string name="score2">S_score</string>
+    <string name="message">You choose the same opponents</string>
     <string name="rulesintro">\nThough there is no limit imposed on the height to which the player can rise, but you cannot stray from the boundary.\n
-The Captain of the team may call for time out. This is the only time a players feet can touch the ground.\n
-The referee may award penalties against a team.\n
-In the case of an injured player, the team must play on without a substitute.\n
-The game only ends when the Snitch is caught, or by mutual consent of the two team\'s captains.\n
-Wands cannot be used during the match.\n
-Under no circumstances are any players allowed to seize another player.</string>
+        The Captain of the team may call for time out. This is the only time a players feet can touch the ground.\n
+        The referee may award penalties against a team.\n
+        In the case of an injured player, the team must play on without a substitute.\n
+        The game only ends when the Snitch is caught, or by mutual consent of the two team\'s captains.\n
+        Wands cannot be used during the match.\n
+        Under no circumstances are any players allowed to seize another player.</string>
     <string name="rulesequp">\n\nThe Quidditch Balls:\n\n
-        <b><i>Quaffle\n</i></b>This ball is a light-weighted red ball, it has three hollowed out areas, designed to make holding the ball easier.\n\n
-        <b><i>Bludger\n</i></b>This ball is a black leathery ball, with an incantation on it to make it fly around and have a nasty temper. They fly at other people on the quidditch team, and it is the beaters job to protect their team mates from the bludgers.\n\n
-        <b><i>Golden Snitch\n</i></b>This is a small nimble golden ball with wings, that can fly around at high speeds. The player who catches the snitch officially ends the game, and wins his team 150 points. If the team during the long match received even more scores, they will be the winner.\n\n</string>
+        <b><i>Quaffle\n</i></b>This ball is a light-weighted red ball, it has three hollowed out areas, designed to make holding the ball easier.
+        \n\n<b><i>Bludger\n</i></b>This ball is a black leathery ball, with an incantation on it to make it fly around and have a nasty temper.
+        They fly at other people on the quidditch team, and it is the beaters job to protect their team mates from the bludgers.\n\n
+        <b><i>Golden Snitch\n</i></b>This is a small nimble golden ball with wings, that can fly around at high speeds.
+        The player who catches the snitch officially ends the game, and wins his team 150 points.
+        If the team during the long match received even more scores, they will be the winner.\n\n</string>
 </resources>
