@@ -32,7 +32,6 @@
 
             </com.facebook.shimmer.ShimmerFrameLayout>
 
-
             <ImageView
                 android:id="@+id/icon_1"
                 style="@style/TeamImage"
@@ -40,7 +39,6 @@
                 android:onClick="click"
                 android:src="@drawable/gryf"
                 tools:ignore="ContentDescription" />
-
 
             <ImageView
                 android:id="@+id/icon_2"
@@ -50,12 +48,10 @@
                 android:src="@drawable/slyth"
                 tools:ignore="ContentDescription" />
 
-
             <Button
                 android:id="@+id/button3"
                 style="@style/Snitch"
                 android:onClick="button3" />
-
 
             <Button
                 android:id="@+id/game_reset"
@@ -87,8 +83,6 @@
                 android:layout_alignStart="@+id/team_g_score"
                 android:layout_below="@+id/team_g_score"
                 android:onClick="button1" />
-
-
         </RelativeLayout>
 
         <RelativeLayout
@@ -125,13 +119,8 @@
                 android:layout_below="@id/pic_2"
                 android:onClick="selectTeam"
                 tools:ignore="ContentDescription" />
-
-
         </RelativeLayout>
-
     </RelativeLayout>
-
-
 </ScrollView>
 
 

@@ -31,7 +31,5 @@
                 android:text="@string/rulesequp" />
 
         </RelativeLayout>
-
     </ScrollView>
-
 </RelativeLayout>

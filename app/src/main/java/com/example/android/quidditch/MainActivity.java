@@ -18,7 +18,9 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.facebook.shimmer.ShimmerFrameLayout;
+
 import java.text.DecimalFormat;
 import java.util.Random;
 
@@ -26,35 +28,44 @@ import static com.example.android.quidditch.R.layout.winner;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String KEY_IMAGE_ONE = "bitmap1";
+    public static final String KEY_IMAGE_TWO = "bitmap2";
     final DecimalFormat decimalFormat = new DecimalFormat("000");
-    String img1 = "bitmap1", img2 = "bitmap2";
-    int teamG = 0, teamS = 0, ImageId;
-    ShimmerFrameLayout shimer;
+    int teamG = 0, teamS = 0;
+    int ImageId;
+    ShimmerFrameLayout shimmerFrameLayout;
     Random randomGenerator = new Random();
-    TextView scoreView1, scoreView2, textMessage, win;
-    private String score1 = String.valueOf((R.string.score1)), score2 = String.valueOf((R.string.score2));
-    private PopupWindow popupWindow;
+    TextView scoreView1, scoreView2;
+    TextView textMessage;
+    TextView win;
     String value_one, value_two;
-    Button first, second, rule, button3;
+    Button first, second;
+    Button rule;
+    Button button3;
     RelativeLayout above, below;
     LayoutInflater layoutInflater, inflater;
-    ImageView pictureOne, pictureTwo, choosenImage, findIt;
+    ImageView pictureOne, pictureTwo;
+    ImageView chosenImage;
+    ImageView findIt;
     ImageView pic, pic2, pic3, pic4;
     Drawable bird, snake, badger, lion;
     Drawable drawable;
     boolean test = true;
     Toast toast;
     View view;
-    Bitmap bitmap1;
+    Bitmap mBitmap;
+    private String score1 = String.valueOf((R.string.score1));
+    private String score2 = String.valueOf((R.string.score2));
+    private PopupWindow popupWindow;
 
     // Save score and  choosen team
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        bitmap1 = ((BitmapDrawable) pictureOne.getDrawable()).getBitmap();
-        outState.putParcelable(img1, bitmap1);
-        bitmap1 = ((BitmapDrawable) pictureTwo.getDrawable()).getBitmap();
-        outState.putParcelable(img2, bitmap1);
+        mBitmap = ((BitmapDrawable) pictureOne.getDrawable()).getBitmap();
+        outState.putParcelable(KEY_IMAGE_ONE, mBitmap);
+        mBitmap = ((BitmapDrawable) pictureTwo.getDrawable()).getBitmap();
+        outState.putParcelable(KEY_IMAGE_TWO, mBitmap);
         outState.putInt(score1, teamG);
         outState.putInt(score2, teamS);
     }
@@ -62,15 +73,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        bitmap1 = (savedInstanceState.getParcelable(img1));
-        pictureOne.setImageBitmap(bitmap1);
-        bitmap1 = (savedInstanceState.getParcelable(img2));
-        pictureTwo.setImageBitmap(bitmap1);
+        mBitmap = (savedInstanceState.getParcelable(KEY_IMAGE_ONE));
+        mBitmap = (savedInstanceState.getParcelable(KEY_IMAGE_TWO));
+        pictureOne.setImageBitmap(mBitmap);
+        pictureTwo.setImageBitmap(mBitmap);
         teamG = (savedInstanceState.getInt(score1));
-        value_one = decimalFormat.format(teamG);
-        scoreView1.setText(value_one);
         teamS = (savedInstanceState.getInt(score2));
+        value_one = decimalFormat.format(teamG);
         value_two = decimalFormat.format(teamS);
+        scoreView1.setText(value_one);
         scoreView2.setText(value_two);
     }
 
@@ -79,33 +90,43 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        shimer = (ShimmerFrameLayout) findViewById(R.id.shimmer_view_container);
-        shimer.setDuration(1000);
-        shimer.setAutoStart(true);
+        shimmerFrameLayout = (ShimmerFrameLayout) findViewById(R.id.shimmer_view_container);
+        shimmerFrameLayout.setDuration(1000);
+        shimmerFrameLayout.setAutoStart(true);
+
         rule = (Button) findViewById(R.id.game_rules);
         button3 = (Button) findViewById(R.id.button3);
+
         scoreView1 = (TextView) findViewById(R.id.team_g_score);
         scoreView2 = (TextView) findViewById(R.id.team_s_score);
+
         value_one = decimalFormat.format(teamG);
         value_two = decimalFormat.format(teamS);
+
         above = (RelativeLayout) findViewById(R.id.layoutLayout);
         below = (RelativeLayout) findViewById(R.id.choiceplayer);
+
         pictureOne = (ImageView) findViewById(R.id.icon_1);
         pictureTwo = (ImageView) findViewById(R.id.icon_2);
+
         first = (Button) findViewById(R.id.button1);
         second = (Button) findViewById(R.id.button2);
+
         pic = (ImageView) findViewById(R.id.pic_1);
         pic2 = (ImageView) findViewById(R.id.pic_2);
         pic3 = (ImageView) findViewById(R.id.pic_3);
         pic4 = (ImageView) findViewById(R.id.pic_4);
+
         bird = getDrawable(R.drawable.ravenclaw);
-        pic.setImageDrawable(bird);
         snake = getDrawable(R.drawable.slyth);
-        pic2.setImageDrawable(snake);
         badger = getDrawable(R.drawable.hufflepuff);
-        pic3.setImageDrawable(badger);
         lion = getDrawable(R.drawable.gryf);
+
+        pic.setImageDrawable(bird);
+        pic2.setImageDrawable(snake);
+        pic3.setImageDrawable(badger);
         pic4.setImageDrawable(lion);
+
         scoreView1.onSaveInstanceState();
         scoreView2.onSaveInstanceState();
 
@@ -223,9 +244,9 @@ public class MainActivity extends AppCompatActivity {
 
     // Team selection
     public void selectTeam(View picture) {
-        choosenImage = (ImageView) picture;
+        chosenImage = (ImageView) picture;
         findIt = (ImageView) findViewById(ImageId);
-        drawable = choosenImage.getDrawable();
+        drawable = chosenImage.getDrawable();
         findIt.setImageDrawable(drawable);
 
         // Reset score if the user changes the team

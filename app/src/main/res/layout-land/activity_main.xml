@@ -31,9 +31,7 @@
                     android:layout_marginTop="@dimen/score_margin"
                     android:src="@drawable/quidditch"
                     tools:ignore="ContentDescription" />
-
             </com.facebook.shimmer.ShimmerFrameLayout>
-
 
             <Button
                 android:id="@+id/button2"
@@ -51,7 +49,6 @@
                 style="@style/TeamImage.Slyth"
                 android:onClick="click"
                 tools:ignore="ContentDescription" />
-
 
             <Button
                 android:id="@+id/button3"
@@ -126,10 +123,6 @@
                 android:layout_marginStart="150dp"
                 android:onClick="selectTeam"
                 tools:ignore="ContentDescription" />
-
-
         </RelativeLayout>
-
     </RelativeLayout>
-
 </ScrollView>
