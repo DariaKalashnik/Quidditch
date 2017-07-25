@@ -35,16 +35,12 @@ public class MainActivity extends AppCompatActivity {
     int ImageId;
     ShimmerFrameLayout shimmerFrameLayout;
     Random randomGenerator = new Random();
-    TextView scoreView1, scoreView2;
     TextView textMessage;
-    TextView win;
-    String value_one, value_two;
     Button first, second;
     Button rule;
     Button button3;
     RelativeLayout above, below;
     LayoutInflater layoutInflater, inflater;
-    ImageView pictureOne, pictureTwo;
     ImageView chosenImage;
     ImageView findIt;
     ImageView pic, pic2, pic3, pic4;
@@ -54,6 +50,13 @@ public class MainActivity extends AppCompatActivity {
     Toast toast;
     View view;
     Bitmap mBitmap;
+    private TextView scoreView1;
+    private TextView scoreView2;
+    private TextView win;
+    private String valueOne;
+    private String valueTwo;
+    private ImageView pictureOne;
+    private ImageView pictureTwo;
     private String score1 = String.valueOf((R.string.score1));
     private String score2 = String.valueOf((R.string.score2));
     private PopupWindow popupWindow;
@@ -79,10 +82,10 @@ public class MainActivity extends AppCompatActivity {
         pictureTwo.setImageBitmap(mBitmap);
         teamG = (savedInstanceState.getInt(score1));
         teamS = (savedInstanceState.getInt(score2));
-        value_one = decimalFormat.format(teamG);
-        value_two = decimalFormat.format(teamS);
-        scoreView1.setText(value_one);
-        scoreView2.setText(value_two);
+        valueOne = decimalFormat.format(teamG);
+        valueTwo = decimalFormat.format(teamS);
+        scoreView1.setText(valueOne);
+        scoreView2.setText(valueTwo);
     }
 
     @Override
@@ -100,8 +103,8 @@ public class MainActivity extends AppCompatActivity {
         scoreView1 = (TextView) findViewById(R.id.team_g_score);
         scoreView2 = (TextView) findViewById(R.id.team_s_score);
 
-        value_one = decimalFormat.format(teamG);
-        value_two = decimalFormat.format(teamS);
+        valueOne = decimalFormat.format(teamG);
+        valueTwo = decimalFormat.format(teamS);
 
         above = (RelativeLayout) findViewById(R.id.layoutLayout);
         below = (RelativeLayout) findViewById(R.id.choiceplayer);
@@ -216,16 +219,16 @@ public class MainActivity extends AppCompatActivity {
 
     // Displays the score for Gryffindor
     public void displayForGryffindor(int score) {
-        value_one = decimalFormat.format(teamG);
+        valueOne = decimalFormat.format(teamG);
         scoreView1.setText(String.valueOf(score));
-        scoreView1.setText(value_one);
+        scoreView1.setText(valueOne);
     }
 
     // Displays the score for Slytherin
     public void displayForSlytherin(int score) {
-        value_two = decimalFormat.format(teamS);
+        valueTwo = decimalFormat.format(teamS);
         scoreView2.setText(String.valueOf(score));
-        scoreView2.setText(value_two);
+        scoreView2.setText(valueTwo);
     }
 
     public void game_rules(View view) {
