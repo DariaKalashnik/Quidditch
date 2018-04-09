@@ -3,21 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/poup">
+    android:background="@color/poup_winner">
 
     <TextView
-        android:id="@+id/grifwon"
+        android:id="@+id/winner_text"
         style="@style/WinnerText" />
 
     <ImageView
-        android:id="@+id/cupwinner"
+        android:id="@+id/cup_winner_img"
         style="@style/CupWinner"
         tools:ignore="ContentDescription" />
 
     <ImageView
-        android:id="@+id/firework"
         style="@style/FireWorkWinner.V"
         tools:ignore="ContentDescription" />
-
-
 </RelativeLayout>

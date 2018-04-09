@@ -1,5 +1,4 @@
 <resources>
-
     <dimen name="qwc">150dp</dimen>
     <dimen name="wrap_content">-2dp</dimen>
     <dimen name="match_parent">-1dp</dimen>
@@ -47,7 +46,6 @@
     <dimen name="value_500">500dp</dimen>
     <dimen name="value_1">1dp</dimen>
     <dimen name="value_10">10dp</dimen>
-
 
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">0dp</dimen>

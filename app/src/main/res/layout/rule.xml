@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/relative"
+    android:id="@+id/game_rules_layout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/poup">
+    android:background="@color/poup_winner">
 
     <TextView
-        android:id="@+id/texttitle"
+        android:id="@+id/game_rules_title"
         style="@style/TextRules" />
 
     <ScrollView style="@style/ScrollText">
@@ -16,13 +16,13 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/textintro"
+                android:id="@+id/game_rules_description"
                 style="@style/TextText"
                 android:text="@string/rulesintro" />
 
             <TextView
                 style="@style/TextText"
-                android:layout_below="@id/textintro"
+                android:layout_below="@id/game_rules_description"
                 android:text="@string/rulesequp" />
 
         </RelativeLayout>

@@ -3,25 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/poup">
-
+    android:background="@color/poup_winner">
 
     <TextView
+        android:id="@+id/winner_text"
         style="@style/WinnerText"
-        android:id="@+id/grifwon"
         android:layout_marginTop="@dimen/ten" />
 
     <ImageView
-        android:id="@+id/cupwinner"
+        android:id="@+id/cup_winner_img"
         style="@style/CupWinner"
         android:layout_height="@dimen/threehundred"
         android:layout_marginTop="@dimen/thirtyfive"
-        tools:ignore="ContentDescription"/>
+        tools:ignore="ContentDescription" />
 
     <ImageView
-        android:id="@+id/firework"
         style="@style/FireWorkWinner.L"
-        tools:ignore="ContentDescription"/>
-
-
+        tools:ignore="ContentDescription" />
 </RelativeLayout>

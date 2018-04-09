@@ -3,20 +3,20 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#FFBA8F94</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="score_1">#630224</color>
-    <color name="score_2">#073309</color>
+    <color name="score_gryf">#630224</color>
+    <color name="score_slyth">#073309</color>
     <color name="bird">#1F396C</color>
     <color name="badger">#D16E25</color>
     <color name="num">#F39C26</color>
     <color name="snitch">#ffe358</color>
     <color name="play_again">#9C8A53</color>
     <color name="buttons">#F2F3F6</color>
-    <color name="poup">#D9FCF8E8</color>
-    <color name="poup_2">#FCDE72</color>
+    <color name="poup_winner">#D9FCF8E8</color>
+    <color name="poup_game_rules">#FCDE72</color>
     <color name="poup_text">#441A28</color>
-    <color name="poup_text_2">#161017</color>
+    <color name="poup_text_two">#161017</color>
     <color name="get_text">#5A2411</color>
-    <color name="transperent">#00000000</color>
+    <color name="transparent">#00000000</color>
     <color name="text">#1D2229</color>
     <color name="toast">#8CFCF1C8</color>
 </resources>

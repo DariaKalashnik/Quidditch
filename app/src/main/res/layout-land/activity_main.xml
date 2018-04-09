@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/scroll_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/game"
-    android:scrollbarThumbVertical="@color/transperent"
+    android:scrollbarThumbVertical="@color/transparent"
     tools:context="com.example.android.quidditch.MainActivity">
 
     <RelativeLayout
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content">
 
         <RelativeLayout
-            android:id="@+id/layoutLayout"
+            android:id="@+id/container_for_shimmer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="visible">
@@ -34,60 +34,58 @@
             </com.facebook.shimmer.ShimmerFrameLayout>
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/score_team_B_btn"
                 style="@style/SlythButton.L"
                 android:onClick="button2" />
 
             <ImageView
-                android:id="@+id/icon_1"
+                android:id="@+id/icon_team_A"
                 style="@style/TeamImage.Gryf"
                 android:onClick="click"
                 tools:ignore="ContentDescription" />
 
             <ImageView
-                android:id="@+id/icon_2"
+                android:id="@+id/icon_team_B"
                 style="@style/TeamImage.Slyth"
                 android:onClick="click"
                 tools:ignore="ContentDescription" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/snitch_btn"
                 style="@style/Snitch"
-                android:layout_alignStart="@+id/game_reset"
+                android:layout_alignStart="@+id/game_reset_btn"
                 android:onClick="button3" />
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/score_team_A_btn"
                 style="@style/GryfButton.L"
                 android:onClick="button1" />
 
             <TextView
-                android:id="@+id/team_g_score"
+                android:id="@+id/team_A_score"
                 style="@style/GryfTextScore.L" />
 
             <TextView
-                android:id="@+id/team_s_score"
+                android:id="@+id/team_B_score"
                 style="@style/SlythTextScore.L" />
 
-
             <Button
-                android:id="@+id/game_reset"
+                android:id="@+id/game_reset_btn"
                 style="@style/PlayAgain.L"
                 android:onClick="resetScore" />
-
 
             <Button
                 android:id="@+id/game_rules"
                 style="@style/GameRules.Land"
-                android:onClick="game_rules" />
+                android:onClick="gameRules" />
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/choiceplayer"
+            android:id="@+id/player_selection_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/layoutLayout"
+            android:layout_below="@+id/container_for_shimmer"
             android:layout_marginTop="@dimen/value_30"
             android:visibility="gone">
 
